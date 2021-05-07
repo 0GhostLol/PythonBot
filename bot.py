@@ -132,9 +132,7 @@ async def on_error(ctx, error):
   error = error.original
  if isinstance(error, commands.MissingPermissions):
         await ctx.send("you dont have permissions to run this command", delete_after=5)
-
-
-
+ 
 
 bot.run('ODQwMDA5MTAyNDczMTY2ODU4.YJR9cA.4R_IXle1WSbnsGfVlOTWEbixjtA')
 
