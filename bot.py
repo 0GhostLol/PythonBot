@@ -18,7 +18,7 @@ async def ping(ctx):
 #sup#
 @bot.command()
 async def sup(ctx):
-  await ctx.send('sup bro')
+  await ctx.send('sup')
 
 #kick
 @bot.command()
@@ -34,7 +34,7 @@ async def on_error(ctx, error):
  if isinstance(error, commands.CommandInvokeError):
   error = error.original
  if isinstance(error, commands.MissingPermissions):
-        await ctx.send("u dont have permissions to run this command", delete_after=10)
+        await ctx.send("you dont have permissions to run this command", delete_after=10)
         await ctx.message.delete()
 
 
@@ -90,7 +90,7 @@ async def on_error(ctx, error):
 #suggestions command
 @bot.command()
 async def suggestion(ctx):
-  await ctx.send('Please dm Ghost.#0309 if you have any ideas', delete_after=10)
+  await ctx.send('Go to the suggestion channel to put a suggestion!', delete_after=10)
   await ctx.message.delete()
 
 
@@ -134,6 +134,6 @@ async def on_error(ctx, error):
         await ctx.send("you dont have permissions to run this command", delete_after=5)
  
 
-bot.run('ODQwMDA5MTAyNDczMTY2ODU4.YJR9cA.4R_IXle1WSbnsGfVlOTWEbixjtA')
+bot.run('ODUyODA2ODk2MzQ2NzI2NDAw.YMMMUA.W7E_KaefJCvFoMLJ2ErPxwh4fmQ')
 
 
