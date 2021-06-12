@@ -132,6 +132,22 @@ async def on_error(ctx, error):
   error = error.original
  if isinstance(error, commands.MissingPermissions):
         await ctx.send("you dont have permissions to run this command", delete_after=5)
+         
+
+         @bot.command()
+         @command()
+         @commands.has_permissions(manage_roles=True)
+    async def warn(self, ctx: Context, user: FetchedMember, *, reason: t.Optional[str] = None) -> None:
+        """Warn a user for the given reason."""
+        if not isinstance(user, Member):
+            await ctx.send(":x: The user doesn't appear to be on the server.")
+            return
+
+        infraction = await _utils.post_infraction(ctx, user, "warning", reason, active=False)
+        if infraction is None:
+            return
+
+        await self.apply_infraction(ctx, infraction, user)
  
 
 bot.run('ODUyODA2ODk2MzQ2NzI2NDAw.YMMMUA.W7E_KaefJCvFoMLJ2ErPxwh4fmQ')
