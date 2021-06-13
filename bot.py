@@ -129,6 +129,6 @@ async def on_error(ctx, error):
          
  
 
-bot.run('ODUyODA2ODk2MzQ2NzI2NDAw.YMMMUA.W7E_KaefJCvFoMLJ2ErPxwh4fmQ')
+bot.run('ODUyODA2ODk2MzQ2NzI2NDAw.YMMMUA.W2qBii58RifCVn-h6jgxv73T3Go')
 
 
