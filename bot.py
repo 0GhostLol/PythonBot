@@ -129,6 +129,6 @@ async def on_error(ctx, error):
          
  
 
-bot.run('ODUyODA2ODk2MzQ2NzI2NDAw.YMMMUA.W2qBii58RifCVn-h6jgxv73T3Go')
+bot.run('token here')
 
 
